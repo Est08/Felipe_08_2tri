@@ -50,6 +50,13 @@ function geraSenha() {
         let numeroAleatorio = Math.random() * alfabeto.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
         senha = senha + alfabeto[numeroAleatorio];
-    }
+    }classificaSenha();
+
     campoSenha.value = senha;
+    classificaSenha();
+}
+	const forcaSenha = document.querySelector('.forca');
+ 
+function classificaSenha(){
+    forcaSenha.classList.add('forte');
 }
